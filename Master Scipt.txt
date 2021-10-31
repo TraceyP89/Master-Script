@@ -1,0 +1,98 @@
+-- drop old table if it exists.
+DROP TABLE IF EXISTS items;
+
+-- create new table.
+CREATE TABLE items (
+    name NVARCHAR(50) NOT NULL,
+    description NVARCHAR(MAX) NOT NULL,
+    price money NOT NULL,
+	quest bit NOT NULL
+);
+
+-- populate table with data.
+INSERT INTO items
+(name,description,price,quest)
+VALUES
+(Vision Goggles,To see in dark areas.,5,false)?,
+(Safety Ropes,For saftey.,3,false),
+(Pocket knives,For emergencies.,2,false),
+(Safety Gloves,To protect hans.,2.5,false),
+(Rusty Coin,An old coin with no value.,10,false),
+(Childs Doll,A doll that reminds you of home.,15,false),
+(Old Ring,A simple ring tarnished by time.,20,true),
+(Strange Key,A key to an unknown lock.,30,true);
+-- populate table with data.
+
+-- drop old table if it exists.
+DROP TABLE IF EXISTS potion;
+
+-- create new table.
+CREATE TABLE potion (
+    name NVARCHAR(50) NOT NULL,
+    description NVARCHAR(MAX) NOT NULL,
+    price money NOT NULL,
+	quest bit NOT NULL,
+	healthEffect int NOT NULL,
+	damageEffect in NOT NULL
+);
+
+-- populate table with data.
+INSERT INTO potion
+(name,description,price,quest, healthEffect,damageEffect)
+VALUES
+(Kryptonite,Glowing green potion that invigorates you.,150,false,5,8),
+(Health Potion,A bright red potion that revitalizes you.,350,false,10,15);
+-- populate table with data.
+
+-- drop old table if it exists.
+DROP TABLE IF EXISTS treasure;
+
+-- create new table.
+CREATE TABLE treasure (
+    name NVARCHAR(50) NOT NULL,
+    description NVARCHAR(MAX) NOT NULL,
+    price money NOT NULL,
+	quest BIT NOT NULL,
+);
+
+-- populate table with data.
+INSERT INTO treasure
+(name,description,price,quest)
+VALUES
+('Silver Star','A valuable star made of pure silver.',100,0),
+('Black Star','A valuable star made of pure titanium.',150,0),
+('Iron Cross','A cross made of iron.',200,0),
+('Ancient Jewel','A beautiful gemstone from an ancient world.',250,0),
+('Warp Drive','A single use warp drive that can take you to another galaxy. Use with [WARP].',9999,1);
+-- populate table with data.
+
+-- drop old table if it exists.
+DROP TABLE IF EXISTS weapons;
+
+-- create new table.
+CREATE TABLE weapons (
+    name NVARCHAR(50) NOT NULL,
+    description NVARCHAR(MAX) NOT NULL,
+    price money NOT NULL,
+	quest bit NOT NULL,
+	damageType NVARCHAR(50) NOT NULL,
+	amtOfDamage int NOT NULL
+);
+
+-- populate table with data.
+INSERT INTO weapons
+(name,description,price,quest, damageType, amtOfDamage)
+VALUES
+('Phaser','A handheldpersonal defense weapon.',100,0,'elemental',2),
+('Pulse Cannon','A large cannon that fires a tetryon pulse.',200,0,'projectile',4),
+('Disruptor','A powerful weapon capable of destroying hulls.',300,0,'disintegrate',6),
+('Assault Rifle','A rifle capable of automatic fire.',400,0,'rifle',7),
+('Moonlight Greatsword','A legendary sword. Its massive blade can fire waves of moonlight.',500,0,'sword',8),
+('Bat''leth','A long curved blade with several handles. Favored by warriors.',600,0,'blade',9),
+('Anduril','A lost sword of legend. Reforged and made whole.',700,0,'impale',10),
+('Tonitrus','A mace with a dynamo inside. swings produce powerful lightning strikes.',800,0,'chemcial',11),
+('Flamethrower','A device that drowns enemies in flames.',250,0,'fire',3),
+('Powergloves','heavy gauntlets for pummeling your enemies.',350,0,'heavyduty',5),
+('Crystal Staff','A magical staff with a large mass of crystals on the end.',750,0,'crystal',12),
+('Dragonslayer Swordspear','A massive swordspear imbued with lightning. Designed to kill dragons.',950,0,'swordspear',15);
+-- populate table with data.
