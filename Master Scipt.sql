@@ -453,7 +453,7 @@ DROP TABLE IF EXISTS items;
 CREATE TABLE items (
     name NVARCHAR(50) NOT NULL,
     description NVARCHAR(MAX) NOT NULL,
-    price money NOT NULL,
+    price int NOT NULL,
 	quest bit NOT NULL
 );
 
@@ -478,7 +478,7 @@ DROP TABLE IF EXISTS potion;
 CREATE TABLE potion (
     name NVARCHAR(50) NOT NULL,
     description NVARCHAR(MAX) NOT NULL,
-    price money NOT NULL,
+    price int NOT NULL,
 	quest bit NOT NULL,
 	healthEffect int NOT NULL,
 	damageEffect int NOT NULL
@@ -499,7 +499,7 @@ DROP TABLE IF EXISTS treasure;
 CREATE TABLE treasure (
     name NVARCHAR(50) NOT NULL,
     description NVARCHAR(MAX) NOT NULL,
-    price money NOT NULL,
+    price int NOT NULL,
 	quest BIT NOT NULL,
 );
 
@@ -521,7 +521,7 @@ DROP TABLE IF EXISTS weapons;
 CREATE TABLE weapons (
     name NVARCHAR(50) NOT NULL,
     description NVARCHAR(MAX) NOT NULL,
-    price money NOT NULL,
+    price int NOT NULL,
 	quest bit NOT NULL,
 	damageType NVARCHAR(50) NOT NULL,
 	amtOfDamage int NOT NULL
